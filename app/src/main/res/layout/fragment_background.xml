@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="android.alex.edu.menuapp.BackgroundFragment">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#ffd54f"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:padding="40dp"
+        android:text="SET MAIN ACTIVITY BACKGROUND COLOR"
+        android:textColor="#ffffe6"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+     <SeekBar
+        android:id="@+id/sbRed"
+        android:layout_width="272dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+        android:max="255"
+        android:progress="128"
+        app:layout_constraintBottom_toBottomOf="@+id/etRed"
+            app:layout_constraintRight_toLeftOf="@+id/etRed"
+        app:layout_constraintTop_toTopOf="@+id/etRed"
+        app:layout_constraintVertical_bias="0.333"
+            app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <SeekBar
+        android:id="@+id/sbGreen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:max="255"
+        android:progress="128"
+        app:layout_constraintBottom_toBottomOf="@+id/etGreen"
+        app:layout_constraintLeft_toLeftOf="@+id/sbRed"
+        app:layout_constraintRight_toRightOf="@+id/sbRed"
+        app:layout_constraintTop_toTopOf="@+id/etGreen"
+        app:layout_constraintVertical_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etRed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dp"
+        android:ems="3"
+        android:inputType="phone"
+        android:text="128"
+        app:layout_constraintRight_toRightOf="@+id/tvTitle"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:layout_marginEnd="7dp" />
+
+    <EditText
+        android:id="@+id/etGreen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="128"
+        app:layout_constraintLeft_toLeftOf="@+id/etRed"
+        app:layout_constraintRight_toRightOf="@+id/etRed"
+        app:layout_constraintTop_toBottomOf="@+id/etRed" />
+
+    <EditText
+        android:id="@+id/etBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="128"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/etGreen"
+        app:layout_constraintRight_toRightOf="@+id/etGreen"
+        app:layout_constraintTop_toBottomOf="@+id/etGreen" />
+
+    <SeekBar
+        android:id="@+id/sbBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:max="255"
+        android:progress="128"
+        app:layout_constraintBottom_toBottomOf="@+id/etBlue"
+        app:layout_constraintLeft_toLeftOf="@+id/sbGreen"
+        app:layout_constraintRight_toRightOf="@+id/sbGreen"
+        app:layout_constraintTop_toTopOf="@+id/etBlue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="#FF808080"
+        android:background="#FF808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOK"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toTopOf="@+id/btnOK"
+        app:layout_constraintRight_toLeftOf="@+id/btnOK"
+        app:layout_constraintVertical_bias="0.875"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/etBlue"
+        app:layout_constraintLeft_toRightOf="@+id/btnCancel" />
+
+
+</android.support.constraint.ConstraintLayout>
